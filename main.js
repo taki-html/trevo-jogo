@@ -174,32 +174,53 @@ function proximaAtividade() {
     document.getElementById('feedback').textContent = '';
     atualizarPlacar();
 
+    // botão para exibir histórico
+    const botaoHistorico = `<button onclick="abrirHistorico()" class="amarelo">Ver Histórico</button>`;
+    document.getElementById('placar').innerHTML += botaoHistorico;
+
+    // conteúdo do modal
     let historicoHTML = `
-      <h3>Histórico de Respostas</h3>
-      <table border="1" style="margin:auto; border-collapse:collapse; color:#ccff99;">
-        <tr>
-          <th>Rodada</th><th>Jogador</th><th>Atividade</th><th>Correta</th><th>Resposta</th><th>Pontos</th>
-        </tr>
+      <div id="historicoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000c; z-index:9999;">
+        <div style="background:#1b1b1b; color:#ccff99; padding:20px; max-width:800px; margin:50px auto; border-radius:10px; border:2px solid #39ff14; box-shadow:0 0 10px #39ff14; overflow:auto; max-height:80%;">
+          <h2>Histórico de Respostas</h2>
+          <table style="margin:auto; border-collapse:collapse; color:#ccff99;">
+            <tr>
+              <th>Rodada</th><th>Jogador</th><th>Atividade</th><th>Correta</th><th>Resposta</th><th>Pontos</th>
+            </tr>
     `;
 
     historico.forEach(item => {
       historicoHTML += `
-        <tr>
-          <td>${item.rodada}</td>
-          <td>${item.jogador}</td>
-          <td>${item.atividade}</td>
-          <td>${item.correta}</td>
-          <td>${item.resposta}</td>
-          <td>${item.pontos}</td>
-        </tr>`;
+            <tr>
+              <td>${item.rodada}</td>
+              <td>${item.jogador}</td>
+              <td>${item.atividade}</td>
+              <td>${item.correta}</td>
+              <td>${item.resposta}</td>
+              <td>${item.pontos}</td>
+            </tr>`;
     });
 
-    historicoHTML += '</table>';
-    document.getElementById('placar').innerHTML += historicoHTML;
+    historicoHTML += `
+          </table>
+          <br>
+          <button onclick="fecharHistorico()" class="vermelho">Fechar</button>
+        </div>
+      </div>
+    `;
 
+    document.body.insertAdjacentHTML('beforeend', historicoHTML);
   } else {
     mostrarAtividade();
   }
+}
+
+function abrirHistorico() {
+  document.getElementById("historicoModal").style.display = "block";
+}
+
+function fecharHistorico() {
+  document.getElementById("historicoModal").style.display = "none";
 }
 
 function atualizarPlacar() {
