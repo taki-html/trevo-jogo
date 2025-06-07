@@ -16,8 +16,10 @@
     <label for="numRodadas">Número de rodadas:</label>
     <input type="number" id="numRodadas" min="1" value="10">
     <br><br>
-    <button class="verde" onclick="iniciarJogo()">Iniciar Jogo</button>
-    <button class="amarelo" onclick="abrirManual()">📘 Manual do Jogo</button>
+    <div class="botoes">
+     <button class="verde" onclick="iniciarJogo()">Iniciar Jogo</button>
+     <button class="amarelo" onclick="abrirManual()">📘 Manual do Jogo</button>
+     </div>
   </div>
 
   <div class="card" id="jogo" style="display:none;">
@@ -33,9 +35,11 @@
         <text x="50" y="58" text-anchor="middle" fill="#ccff99" font-size="22" id="timerText">30</text>
       </svg>
     </div>
-    <button class="verde" onclick="responder('verde')">Agrega</button>
-    <button class="amarelo" onclick="responder('amarelo')">Necessário</button>
-    <button class="vermelho" onclick="responder('vermelho')">Não agrega</button>
+      <div class="botoes">
+       <button class="verde" onclick="responder('verde')">Agrega</button>
+       <button class="amarelo" onclick="responder('amarelo')">Necessário</button>
+       <button class="vermelho" onclick="responder('vermelho')">Não agrega</button>
+      </div>
     <p id="feedback"></p>
     <div id="placar"></div>
     <div id="progresso"></div>
