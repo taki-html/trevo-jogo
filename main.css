@@ -6,6 +6,7 @@ body {
   padding: 30px;
 }
 
+
 .card {
   background: linear-gradient(135deg, #1b1b1b, #222);
   border: 2px solid #39ff14;
@@ -136,4 +137,27 @@ th, td {
   .botoes button {
     flex: 1 1 100%;
   }
+}
+
+#historicoModal table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #111;
+}
+
+#historicoModal th, #historicoModal td {
+  padding: 8px 12px;
+  border: 1px solid #39ff14;
+  text-align: center;
+}
+
+#historicoModal h2 {
+  font-size: 24px;
+  color: #66ff66;
+  margin-bottom: 15px;
+}
+
+/* Reaproveita botões padrão */
+#historicoModal button {
+  margin-top: 15px;
 }
