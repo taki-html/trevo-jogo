@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trevo de Quatro Folhas 🍀</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/png" href="imagens/trevo.png">
+</head>
+<body>
+  <script src="main.js"></script>
+  <div class="card" id="setup">
+    <h1>Trevo de Quatro Folhas 🍀</h1>
+    <h2>Escolha o número de jogadores (até 6):</h2>
+    <input type="number" id="numJogadores" min="1" max="6" value="2"><br><br>
+    <label for="numRodadas">Número de rodadas:</label>
+    <input type="number" id="numRodadas" min="1" value="10"><br><br>
+    <button onclick="iniciarJogo()" class="verde">Iniciar Jogo</button>
+    <button onclick="abrirManual()" class="amarelo">📘 Manual do Jogo</button>
+  </div>
+
+  <div class="card" id="jogo" style="display:none;">
+    <h2>Classifique a Atividade</h2>
+    <h3 id="jogadorAtualLabel"></h3>
+    <h1 id="atividade"></h1>
+    <div id="timerCircle">
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="45" stroke="#444" stroke-width="10" fill="none" />
+    <circle id="timerArc" cx="50" cy="50" r="45"
+            stroke-width="10" fill="none"
+            stroke-dasharray="282.6" stroke-dashoffset="0" />
+    <text x="50" y="58" text-anchor="middle" fill="#ccff99" font-size="22" id="timerText">30</text>
+  </svg>
+</div>
+    <button class="verde" onclick="responder('verde')">Agrega</button>
+    <button class="amarelo" onclick="responder('amarelo')">Necessário</button>
+    <button class="vermelho" onclick="responder('vermelho')">Não agrega</button>
+    <p id="feedback"></p>
+    <div id="placar"></div>
+    <div id="progresso"></div>
+  </div>
+
+  <div id="manualModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000c; z-index:9999;">
+    <div style="background:#1b1b1b; color:#ccff99; padding:20px; max-width:800px; margin:50px auto; border-radius:10px; border:2px solid #39ff14; box-shadow:0 0 10px #39ff14; overflow:auto; max-height:80%;">
+      <h2>📘 Manual do Jogo</h2>
+      <p><strong>Objetivo:</strong> Classificar corretamente as atividades da produção de cerveja:</p>
+      <ul>
+        <li><span style="color:#39ff14;">Verde:</span> atividades que agregam valor</li>
+        <li><span style="color:#FFC107;">Amarelo:</span> não agregam valor, mas são necessárias</li>
+        <li><span style="color:#F44336;">Vermelho:</span> não agregam valor</li>
+      </ul>
+      <p><strong>Regras:</strong></p>
+      <ol>
+        <li>Sorteie uma carta</li>
+        <li>Classifique em até 30s</li>
+        <li>Pontue conforme sua resposta</li>
+      </ol>
+      <p><strong>Pontuação:</strong></p>
+      <ul>
+        <li>Verde: +3 pts</li>
+        <li>Amarelo: +2 pts</li>
+        <li>Vermelho: +1 pt</li>
+        <li>Erro grave: -3 pts</li>
+        <li>Erro leve: -2 pts</li>
+        <li>Tempo excedido: -1 pt</li>
+        <li>5 acertos seguidos: +5 pts bônus</li>
+      </ul>
+      <p><strong>Fim:</strong> Vence quem tiver mais pontos ao final das rodadas.</p>
+      <button onclick="fecharManual()" class="vermelho">Fechar</button>
+    </div>
+  </div>
+</body>
+</html>

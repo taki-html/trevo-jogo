@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #ccff99;
+    text-align: center;
+    padding: 30px;
+  }
+  .card {
+    background: #1b1b1b;
+    border: 2px solid #39ff14;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px #39ff14;
+    max-width: 800px;
+    margin: auto;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .verde { background: #39ff14; color: #000; }
+  .amarelo { background: #FFC107; color: #000; }
+  .vermelho { background: #F44336; color: white; }
+  .score { font-weight: bold; font-size: 18px; margin-top: 10px; }
+  select, .next-btn, input[type=number] {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #39ff14;
+    background: #000;
+    color: #ccff99;
+  }
+  #timer {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .vencedor {
+  color: #00ffcc;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.verde:hover {
+  box-shadow: 0 0 10px 2px #39ff14;
+}
+.amarelo:hover {
+  box-shadow: 0 0 10px 2px #FFC107;
+}
+.vermelho:hover {
+  box-shadow: 0 0 10px 2px #F44336;
+}
+
+#atividade {
+  opacity: 0;                   /* Começa invisível */
+  transition: opacity 0.5s ease-in;
+}
+
+#atividade.fade-in {
+  opacity: 1;                   /* Com a classe "fade-in", ele aparece suavemente */
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .card {
+    padding: 15px;
+  }
+  button {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+#timerCircle {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+}
+#timerText {
+  font-weight: bold;
+}
+
+.timer-verde {
+  stroke: #39ff14;
+}
+.timer-amarelo {
+  stroke: #FFC107;
+}
+.timer-vermelho {
+  stroke: #F44336;
+}
+
+#numRodadas {
+  width: 70px;
+}
