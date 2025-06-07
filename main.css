@@ -1,68 +1,76 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #ccff99;
-    text-align: center;
-    padding: 30px;
-  }
-  .card {
-    background: #1b1b1b;
-    border: 2px solid #39ff14;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 20px #39ff14;
-    max-width: 800px;
-    margin: auto;
-  }
-  button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .verde { background: #39ff14; color: #000; }
-  .amarelo { background: #FFC107; color: #000; }
-  .vermelho { background: #F44336; color: white; }
-  .score { font-weight: bold; font-size: 18px; margin-top: 10px; }
-  select, .next-btn, input[type=number] {
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #39ff14;
-    background: #000;
-    color: #ccff99;
-  }
-  #timer {
-    font-size: 24px;
-    margin: 10px 0;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #ccff99;
+  text-align: center;
+  padding: 30px;
+}
 
-  .vencedor {
+.card {
+  background: linear-gradient(135deg, #1b1b1b, #222);
+  border: 2px solid #39ff14;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 0 25px #39ff14aa;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+button {
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.verde { background: #39ff14; color: #000; }
+.amarelo { background: #FFC107; color: #000; }
+.vermelho { background: #F44336; color: white; }
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px 2px rgba(255,255,255,0.2);
+}
+
+.score {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+select, .next-btn, input[type=number] {
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #39ff14;
+  background: #000;
+  color: #ccff99;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+#timer {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.vencedor {
   color: #00ffcc;
   font-size: 20px;
   font-weight: bold;
   text-shadow: 0 0 5px #00ffcc;
 }
 
-.verde:hover {
-  box-shadow: 0 0 10px 2px #39ff14;
-}
-.amarelo:hover {
-  box-shadow: 0 0 10px 2px #FFC107;
-}
-.vermelho:hover {
-  box-shadow: 0 0 10px 2px #F44336;
-}
-
 #atividade {
-  opacity: 0;                   /* Começa invisível */
+  opacity: 0;
   transition: opacity 0.5s ease-in;
 }
 
 #atividade.fade-in {
-  opacity: 1;                   /* Com a classe "fade-in", ele aparece suavemente */
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
@@ -83,6 +91,7 @@ body {
   width: 100px;
   height: 100px;
 }
+
 #timerText {
   font-weight: bold;
 }
@@ -97,6 +106,21 @@ body {
   stroke: #F44336;
 }
 
-#numRodadas {
-  width: 70px;
+h1 {
+  font-size: 36px;
+  color: #66ff66;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+table {
+  margin-top: 20px;
+  background-color: #111;
+}
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #39ff14;
 }
