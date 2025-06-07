@@ -176,30 +176,5 @@ th, td {
   text-align: center;
 }
 
-.in {
-	animation: fade-in 2s;
-}
 
-.out {
-	animation: fade-out 2s;
-	opacity: 0;
-  position: absolute;
-	z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-}
-
-@keyframes fade-in{
-	0%{ opacity: 0;}
-	90%{ opacity: 0;}
-	100%{ opacity: 1;}
-}
-
-@keyframes fade-out{
-	0%{ opacity: 1;}
-	90%{ opacity: 1;}
-	100%{ opacity: 0;}
-}
 
