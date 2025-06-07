@@ -161,3 +161,17 @@ th, td {
 #historicoModal button {
   margin-top: 15px;
 }
+
+#historicoModal table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 760px;
+  border-collapse: collapse;
+  background-color: #111;
+}
+
+#historicoModal td, 
+#historicoModal th {
+  text-align: center;
+}
