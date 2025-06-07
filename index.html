@@ -8,30 +8,31 @@
   <link rel="icon" type="image/png" href="imagens/trevo.png">
 </head>
 <body>
-  <script src="main.js"></script>
   <div class="card" id="setup">
     <h1>Trevo de Quatro Folhas 🍀</h1>
     <h2>Escolha o número de jogadores (até 6):</h2>
-    <input type="number" id="numJogadores" min="1" max="6" value="2"><br><br>
+    <input type="number" id="numJogadores" min="1" max="6" value="2">
+    <br><br>
     <label for="numRodadas">Número de rodadas:</label>
-    <input type="number" id="numRodadas" min="1" value="10"><br><br>
-    <button onclick="iniciarJogo()" class="verde">Iniciar Jogo</button>
-    <button onclick="abrirManual()" class="amarelo">📘 Manual do Jogo</button>
+    <input type="number" id="numRodadas" min="1" value="10">
+    <br><br>
+    <button class="verde" onclick="iniciarJogo()">Iniciar Jogo</button>
+    <button class="amarelo" onclick="abrirManual()">📘 Manual do Jogo</button>
   </div>
 
   <div class="card" id="jogo" style="display:none;">
-    <h2>Classifique a Atividade</h2>
+    <h2>Classifique a Atividade!</h2>
     <h3 id="jogadorAtualLabel"></h3>
     <h1 id="atividade"></h1>
     <div id="timerCircle">
-  <svg width="100" height="100">
-    <circle cx="50" cy="50" r="45" stroke="#444" stroke-width="10" fill="none" />
-    <circle id="timerArc" cx="50" cy="50" r="45"
-            stroke-width="10" fill="none"
-            stroke-dasharray="282.6" stroke-dashoffset="0" />
-    <text x="50" y="58" text-anchor="middle" fill="#ccff99" font-size="22" id="timerText">30</text>
-  </svg>
-</div>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="45" stroke="#444" stroke-width="10" fill="none" />
+        <circle id="timerArc" cx="50" cy="50" r="45"
+                stroke-width="10" fill="none"
+                stroke-dasharray="282.6" stroke-dashoffset="0" />
+        <text x="50" y="58" text-anchor="middle" fill="#ccff99" font-size="22" id="timerText">30</text>
+      </svg>
+    </div>
     <button class="verde" onclick="responder('verde')">Agrega</button>
     <button class="amarelo" onclick="responder('amarelo')">Necessário</button>
     <button class="vermelho" onclick="responder('vermelho')">Não agrega</button>
@@ -69,5 +70,6 @@
       <button onclick="fecharManual()" class="vermelho">Fechar</button>
     </div>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
