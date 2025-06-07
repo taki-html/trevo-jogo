@@ -124,3 +124,16 @@ th, td {
   padding: 8px 12px;
   border: 1px solid #39ff14;
 }
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .botoes button {
+    flex: 1 1 100%;
+  }
+}
